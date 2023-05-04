@@ -15,6 +15,7 @@
   --borders-color: #e7e9fc;
   --active-btn-text: #ffffff;
   --customers-color: #8e8f99;
+  --footer-socials-hover-color: #31d0aa;
   --indent: 24px;
   --items: 4;
 }
@@ -41,7 +42,7 @@ body {
   margin-bottom: 72px;
 }
 .section {
-  padding: 120px 0;
+  padding: 120px 120px;
 }
 .link {
   text-decoration: none;
@@ -275,7 +276,7 @@ img {
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 .team-card-descr {
-  padding: 32px 16px;
+  padding: 32px 0;
 }
 .team-name {
   color: var(--primary-text-color);
@@ -312,10 +313,9 @@ img {
 }
 .socials-icon {
   fill: var(--footer-text-color);
-  height: 16px;
-  width: 16px;
 }
-.socials-link:hover {
+.socials-link:hover,
+.socials-link:focus {
   background-color: var(--active-color);
 }
 /* CUSTOMERS */
@@ -325,15 +325,26 @@ img {
   justify-content: center;
 }
 .customers-item {
-  border: 1px solid var(--customers-color);
-  border-radius: 4px;
-  padding: 16px 32px;
-  width: 168px;
+  width: calc((100% - 120px) / 6);
   height: 88px;
 }
 .customers-link {
-  fill: var(--customers-color);
-  display: block;
+  color: var(--customers-color);
+  display: flex;
+  width: 100%;
+  height: 100%;
+  border: 1px solid var(--customers-color);
+  border-radius: 4px;
+  align-items: center;
+  justify-content: center;
+}
+.customers-link:hover,
+.customers-link:focus {
+  border-color: var(--active-color);
+  color: var(--active-color);
+}
+.customers-icon {
+  fill: currentColor;
 }
 /* PORTFOLIO */
 .portfolio {
@@ -427,6 +438,12 @@ img {
   background-color: var(--primary-text-color);
   padding: 100px 0;
 }
+.footer-container {
+  display: flex;
+}
+.footer-logo-container {
+  margin-right: 120px;
+}
 .footer-logo {
   color: var(--link-color);
   font-family: var(--secondary-font);
@@ -449,4 +466,36 @@ img {
   line-height: 1.5;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   max-width: 264px;
+}
+.footer-social-heading {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--active-btn-text);
+  margin-bottom: 16px;
+}
+.footer-socials-list {
+  display: flex;
+  gap: 16px;
+}
+.footer-socials-item {
+  width: 40px;
+  height: 40px;
+}
+.footer-socials-link {
+  width: 100%;
+  height: 100%;
+  background-color: var(--link-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer-socials-link:hover,
+.footer-socials-link:focus {
+  background-color: var(--footer-socials-hover-color);
+}
+.footer-socials-icon {
+  fill: var(--footer-text-color);
 }
