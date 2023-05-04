@@ -406,11 +406,14 @@ img {
   box-sizing: border-box;
   width: calc((100% - 48px) / 3);
 }
-.products-item:hover {
+.products-link {
+  display: block;
+}
+.products-link:hover,
+.products-link:focus {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
-
 .products-item-descr {
   padding: 32px 16px;
   border: 1px solid var(--borders-color);
